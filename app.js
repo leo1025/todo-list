@@ -13,6 +13,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+// Building new cluster on MongoDB servers
 mongoose.connect("mongodb+srv://admin:V1VzB6nAXg58NpcX@cluster0.ed4cmtf.mongodb.net/todoListDB", {useNewUrlParser: true});
 
 const itemsSchema = new Schema({
@@ -124,8 +125,13 @@ app.post("/delete", function(req, res) {
     }
 });
 
+let port = process.env.PORT;
+if(port == null || port == "") {
+    port = 3000;
+}
+
 // Opens listening port for server. Can be viewed from Nodemon
-app.listen(3000, function() {
-    console.log("Server started on port 3000");
+app.listen(port, function() {
+    console.log("Server started successfully!");
 });
 
