@@ -1,9 +1,23 @@
 # ToDo List App
-Simple ToDo List App with limited functionality
+Simple ToDo List App with limited functionality created by following tutorials.
 
-Following tutorials to learn backend functionality with EJS and Node. The app uses simple files and is a quick introduction to EJS Templates and Layouts, Node.js, Express and Body Parser. Also some Node Module Exports for `date.js`.
+The app uses EJS, MongoDB and Heroku for its functionality. It was an exercise in NodeJS, Express, EJS and MongoDB databases. This is meant as a stepping stone to creating a personal blog website.
 
-## How to use
+## Live site
+
+`https://leona-todolist-v2.herokuapp.com/`
+
+- You can add new ToDo items by type in the text box and hitting the `+` button.
+
+- You can delete items by clicking the checkbox.
+
+- You can also generate new lists by adding a new route after the url. Example:
+
+`https://leona-todolist-v2.herokuapp.com/work`
+
+- This will generate a new work list if it does not exist. If it does, then it will access the list for the given route.
+
+## How to use locally
 
 To run, clone repo and ensure you have Nodemon installed.
 
@@ -12,19 +26,3 @@ To run, clone repo and ensure you have Nodemon installed.
 `nodemon app.js`
 
 Go to `http://localhost:3000`
-
-## Additional pages
-
-There are 2 other pages but do not have UI navigation. To access them go to:
-
-`http://localhost:3000/about`
-
-and
-
-`http://localhost:3000/work`
-
-
-## Personal Notes
-- This app is a good introductory step to creating more complex projects.
-- I have an idea of creating a more robust full scale app for a customizable ToDo List. Perhaps built with React.
-- Should that app be offline or online? Should it be an app that can be downloaded like a standalone app?
