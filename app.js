@@ -125,13 +125,12 @@ app.post("/delete", function(req, res) {
     }
 });
 
+// Opens listening port for server. Can be viewed from Nodemon
 let port = process.env.PORT;
-if(port == null || port == "") {
-    port = 3000;
+if (port == null || port == "") {
+  port = 3000;
 }
 
-// Opens listening port for server. Can be viewed from Nodemon
 app.listen(port, function() {
-    console.log("Server started successfully!");
+  console.log("Server started successfully");
 });
-
